@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Ejercicio2Ajax</display-name>
+  <context-param>
+  	<param-name>unidadPersistencia</param-name>
+  	<param-value>dsFilmEjer2</param-value>
+  </context-param>
+  <servlet>
+    <description>Servlet Ajax, Consulta de peliculas</description>
+    <display-name>ConsultarPeliculas</display-name>
+    <servlet-name>ConsultarPeliculas</servlet-name>
+    <servlet-class>ejercicio2Ajax.servlets.ConsultarPeliculas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConsultarPeliculas</servlet-name>
+    <url-pattern>/consultarpeliculas</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Servlet Ajax, Muestra las sugerencias</description>
+    <display-name>SugerirDato</display-name>
+    <servlet-name>SugerirDato</servlet-name>
+    <servlet-class>ejercicio2Ajax.servlets.SugerirDato</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SugerirDato</servlet-name>
+    <url-pattern>/sugerirdato</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
